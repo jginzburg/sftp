@@ -9,6 +9,7 @@ RUN apt-get update && \
     apt-get -y install openssh-server && \
     rm -rf /var/lib/apt/lists/* && \
     mkdir -p /var/run/sshd && \
+    mkdir -p /var/run/sftp && \
     chmod -R 777 /var  && \
     chmod  777 /etc  && \
     chmod  777 /etc/ssh  && \
