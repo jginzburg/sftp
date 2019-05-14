@@ -10,7 +10,8 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* && \
     mkdir -p /var/run/sshd && \
     chmod -R 777 /var  && \
-    chmod -R 777 /etc  && \
+    chmod  777 /etc  && \
+    chmod  777 /etc/ssh  && \
     rm -f /etc/ssh/ssh_host_*key*
 
 COPY files/sshd_config /etc/ssh/sshd_config
