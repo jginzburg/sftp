@@ -13,6 +13,7 @@ RUN apt-get update && \
     chmod -R 777 /var/run  && \
     chmod  777 /etc  && \
     chmod  777 /etc/ssh  && \
+    adduser edenor &&  \
     rm -f /etc/ssh/ssh_host_*key*
 
 COPY files/sshd_config /etc/ssh/sshd_config
@@ -22,4 +23,4 @@ COPY files/entrypoint /
 EXPOSE 2222
 
 ENTRYPOINT ["/entrypoint"]
-USER 1001
+USER edenor
